@@ -1,0 +1,32 @@
+.heading{
+    display: flex;
+    gap: 5px;
+}
+
+.div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 1rem 0 1rem;
+}
+
+button{
+    display: flex;
+    background-color: rgb(50, 185, 66);
+    padding:5px 20px 5px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+button:hover{
+    background-color: rgb(178, 199, 140);
+    color: darkgreen;
+}
+.Dark{
+    display: flex ;
+    flex-direction: column;
+}
+.fullIcon{
+    display: flex;
+}

@@ -1,0 +1,23 @@
+.writtingSpace{
+    color: var(--fgColor-default, var(--color-fg-default));
+    background-color: var(--bgColor-default, var(--color-canvas-default));
+    width: 50%;
+    border: 1px solid var(--fgColor-default);
+    outline-color: aqua; 
+    object-fit: cover;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+/* .writtingSpace button{
+    background-color: blue;
+
+} */
+
+[fullscreen = "full"] .writtingSpace{
+  display: flex;
+  width: 100%;
+  height: 50vh;
+}
+
+[fullscreen = "half"] div .halfSHeading{
+    visibility: hidden;
+}

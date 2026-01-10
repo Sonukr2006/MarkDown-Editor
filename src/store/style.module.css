@@ -1,0 +1,16 @@
+.Container {
+  margin: 20px;
+  display: flex;
+  max-width: 1880px;
+  height: 78vh;
+  margin-bottom: 2rem;
+  background-color: rgb(102, 109, 107);
+  gap: 5px;
+  overflow: hidden;
+}
+[fullscreen = "full"] .Container{
+  display: flex;
+  flex-direction: column;
+  height: 120vh;
+  border: 1px solid white;
+}

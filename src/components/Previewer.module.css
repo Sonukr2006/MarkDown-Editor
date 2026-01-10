@@ -1,0 +1,65 @@
+.previewerSpace {
+  color: var(--fgColor-default, var(--color-fg-default));
+  background-color: var(--bgColor-default, var(--color-canvas-default));
+  width: 50%;
+  padding: 5px;
+  border: 2px solid var(--color-border-primary);
+  object-fit: cover;
+  overflow-y: scroll;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 25px;
+  padding-bottom: 5rem;
+  scroll-behavior: smooth; 
+}
+
+.previewerSpace h1 { color: #38bdf8; }
+.previewerSpace code {  color: #facc15; }
+
+
+[fullScreen = 'full'] .previewerSpace {
+  width: 97%;
+  height: 100%;
+  padding-right: 2rem;
+}
+
+
+a {
+  color: rgb(91, 177, 91);
+  font-weight: 500;
+  font-size: 20px;
+  padding-left: 25px;
+}
+a:hover{
+    color: rgb(119, 124, 111);
+}
+
+blockquote {
+  font-size: 22px;
+  color: var(--fgColor-default, var(--color-fg-default));
+  border-left: 1rem solid var(--color-border-primary, var(--color-border-primary));
+  border-radius: 0.25rem;
+  font-weight: 500;
+  padding-left: 8px;
+}
+pre code{
+  color: rgb(88, 227, 227);
+}
+
+pre {
+  border: 1px solid var(--color-border-primary);
+  border-radius: 0.25rem;
+  overflow: auto;
+  padding: 1rem;
+  white-space: pre-wrap;
+  margin: 5rem;
+  background-color:var(--color-canvas-subtle);
+  color: var(--fgColor-default, var(--color-fg-default));
+
+}
+
+h1 {
+  border-bottom: .15rem solid var(--color-border-primary);
+  padding-left: 1px;
+}
+
