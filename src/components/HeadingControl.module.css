@@ -30,3 +30,132 @@ button:hover{
 .fullIcon{
     display: flex;
 }
+
+.popupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 41, 41, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  gap: 10px;
+}
+
+.popupBox {
+  width: 20rem; 
+  background: #322d2d;
+  row-gap: .25rem;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+.popupTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.popupActions {
+  margin-top: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popupBtn {
+  width: 90%;
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+  border-radius: 8px;
+  background: rgb(166, 161, 161);
+  color: #1b2d38;
+  cursor: pointer;
+  font-weight: 600;
+}
+.popupInput{
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 10px;
+
+}
+
+.popupBtn:hover {
+  background: #68a680;
+}
+
+.popupClose {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.popupClose:hover {
+  background: #222;
+}
+
+.popupBox {
+  transform: scale(0.95);
+  opacity: 0;
+  animation: popupIn 0.2s ease forwards;
+}
+
+@keyframes popupIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*  tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipText {
+  position: absolute;
+
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #111;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+
+  z-index: 9999;
+  pointer-events: none; 
+  user-select: none;
+}
+
+.tooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #111;
+}
+
+.tooltip:hover .tooltipText {
+  opacity: 1;
+  visibility: visible;
+}
+
+

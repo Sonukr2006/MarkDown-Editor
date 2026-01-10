@@ -1,6 +1,6 @@
 import { marked } from "marked";
 
-export default function downloadMarkdownAsHTML(markdownText) {
+export default function downloadMarkdownAsHTML(markdownText, fileName) {
   const htmlBody = marked.parse(markdownText);
   
   
@@ -31,7 +31,7 @@ export default function downloadMarkdownAsHTML(markdownText) {
 
   const a = document.createElement("a");
   a.href = url;
-  a.download = "document.html"; // ✅ file name
+  a.download = `${fileName}.html`; // ✅ file name
   a.click();
 
   URL.revokeObjectURL(url);

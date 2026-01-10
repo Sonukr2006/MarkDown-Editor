@@ -7,10 +7,6 @@
     object-fit: cover;
     transition: width 0.3s ease, height 0.3s ease;
 }
-/* .writtingSpace button{
-    background-color: blue;
-
-} */
 
 [fullscreen = "full"] .writtingSpace{
   display: flex;

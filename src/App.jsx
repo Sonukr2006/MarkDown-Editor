@@ -9,10 +9,20 @@ import {marked} from 'marked';
 
 const App = () => {
   const [text, settext] = useState('');
-  const [theme, setTheme] = useState(false);
-const [count, setcount] = useState(20);
+  const [count, setcount] = useState(20);
+  const [theme, setTheme] = useState(() => {
+    // Load from localStorage on first render
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme;
+    }
+    // Check system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
 
- useEffect(() => {
+  // Save to localStorage when theme changes
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 

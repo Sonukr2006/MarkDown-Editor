@@ -35,7 +35,7 @@
 }
 
 .popupBox {
-  width: 18rem; /* 72 tailwind = 288px */
+  width: 18rem; 
   background: #322d2d;
   row-gap: .25rem;
   padding: 16px;

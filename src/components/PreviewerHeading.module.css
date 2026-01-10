@@ -9,4 +9,9 @@
     gap: .25rem;
     background-color: rgb(70, 55, 37);
 }
-
+.PreviewerHeading .arrow{
+    visibility: hidden;
+}
+[fullScreen = 'full'] .arrow {
+  visibility: visible;
+}
